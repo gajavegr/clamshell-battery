@@ -1,0 +1,25 @@
+{
+  "title": "Clamshell Battery Mode Toggle",
+  "rules": [
+    {
+      "description": "Toggle clamshell-on-battery mode: Left Control + Left Shift + Left Command + L",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["left_control", "left_shift", "left_command"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "'{{TOGGLE_SCRIPT}}' toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

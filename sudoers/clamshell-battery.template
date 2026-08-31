@@ -1,0 +1,5 @@
+# Allow {{USER}} to flip disablesleep without a password prompt, so the
+# Karabiner hotkey and menu bar app (both run with no TTY) can call
+# sudo pmset non-interactively. Scoped to these two exact command lines only —
+# no wildcard, so this can't be used to run arbitrary pmset commands as root.
+{{USER}} ALL=(root) NOPASSWD: /usr/bin/pmset -a disablesleep 0, /usr/bin/pmset -a disablesleep 1
